@@ -1,4 +1,3 @@
-//С тестами я еще не разобрался!
 
 
 //Задача на кол-во ключей обьекта
@@ -8,18 +7,26 @@
 //     firstName: 'Petya',
 //     lastName: 'Petrov',
 //     age: 30,
-//     city: 'Kyiv',
+//     city:'Kyiv',
 // };
-// sumKeys = (student) => {
-//     return Object.keys(student).length;
+// sumKeys = (object) =>{
+//     let sumKeys= 0;
+//     for (const key in object) {
+//         if (object.hasOwnProperty(key)) {
+//             sumKeys++;
+//         }
+//     }
+//     return sumKeys
 // }
-// alert(sumKeys(student));
 
-// ///////
-// Object.keys(student);
+//2-ой вариант
+// sumKeys = (object) => {
+//     return Object.keys(object).length;
+// }
 
-// console.log(Object.keys(student));
-// //////
+//alert(sumKeys(student));
+
+
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -28,23 +35,36 @@
 // // Задача на копирование обьекта.........
 
 
- student = {
+student = {
     firstName: 'Petya',
     lastName: 'Petrov',
     age: 30,
-    city: 'Kyiv',
-    id: '',
+    city: 'Odessa',
 };
-copyStudent = (student) => {
-    let newStudent = {};
 
-    for (key in student) {
-        newStudent[key] = student[key];
-    }
-    return newStudent;
-}
 
-console.log(copyStudent(student));
+//////////////////////////////////////////////
+//Вариант №1 (функция)
+// objectCopy = (object) => {
+//     let objectCopy = {};
+//     for (key in object) {
+//         objectCopy[key] = object[key];
+//     }
+//     return objectCopy;
+// }
+// console.log(student);
+// console.log(objectCopy(student));
+
+//Вариант №2
+// let objectCopy = Object.assign({},student);
+// console.log(objectCopy);
+
+//Вариант №3
+// let objectCopy = JSON.parse(JSON.stringify(student));
+// console.log(objectCopy);
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////
@@ -59,9 +79,6 @@ console.log(copyStudent(student));
 // };
 // console.log(createStudent('Ivan', 'Ivanov', 25));
 // console.log(createStudent('Andrew', 'Sidorov', 45, 'Lviv'));
-
-
-
 
 
 
