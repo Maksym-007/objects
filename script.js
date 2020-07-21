@@ -3,28 +3,28 @@
 //Задача на кол-во ключей обьекта
 
 
-// student = {
-//     firstName: 'Petya',
-//     lastName: 'Petrov',
-//     age: 30,
-//     city:'Kyiv',
-// };
-// sumKeys = (object) =>{
-//     let sumKeys= 0;
-//     for (const key in object) {
-//         if (object.hasOwnProperty(key)) {
-//             sumKeys++;
-//         }
-//     }
-//     return sumKeys
-// }
+student = {
+    firstName: 'Petya',
+    lastName: 'Petrov',
+    age: 30,
+    city: 'Kyiv',
+};
+sumKeys = (object) => {
+    let sumKeys = 0;
+    for (const key in object) {
+        if (object.hasOwnProperty(key) && typeof object[key] == 'string') {
+            sumKeys++;
+        }
+    }
+    return sumKeys
+}
 
 //2-ой вариант
-// sumKeys = (object) => {
-//     return Object.keys(object).length;
+// sumKeys = (object) =>{
+//    return Object.keys(object).length;
 // }
 
-//alert(sumKeys(student));
+alert(sumKeys(student));
 
 
 
@@ -35,12 +35,12 @@
 // // Задача на копирование обьекта.........
 
 
-student = {
-    firstName: 'Petya',
-    lastName: 'Petrov',
-    age: 30,
-    city: 'Odessa',
-};
+// student = {
+//     firstName: 'Petya',
+//     lastName: 'Petrov',
+//     age: 30,
+//     city: 'Odessa',
+// };
 
 
 //////////////////////////////////////////////
